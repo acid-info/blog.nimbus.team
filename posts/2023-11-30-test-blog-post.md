@@ -22,3 +22,4 @@ something something ...
 
 [Link](https://logos.co)
 
+![test image](/static/test-image.webp)
