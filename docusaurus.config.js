@@ -7,8 +7,8 @@ const katex = require('rehype-katex')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Logos',
-  url: 'https://logos.co/',
+  title: 'Nimbus',
+  url: 'https://nimbus.team/',
   baseUrl: '/',
 
   markdown: {
@@ -28,7 +28,7 @@ const config = {
       '@acid-info/logos-docusaurus-preset',
       /** @type {import('@acid-info/logos-docusaurus-preset').PluginOptions} */
       ({
-        businessUnit: 'VacResearch',
+        businessUnit: 'nimbus',
         theme: {
           name: 'default',
           options: {
@@ -53,7 +53,7 @@ const config = {
         id: 'blog',
         routeBasePath: '/',
         path: 'posts',
-        blogTitle: 'Research Log',
+        blogTitle: 'Nimbus Blog',
         blogSidebarCount: 0,
         authorsMapPath: 'authors.yml',
         remarkPlugins: [math],
@@ -83,7 +83,7 @@ const config = {
           },
           {
             label: 'About',
-            href: 'https://waku.org/',
+            href: 'https://nimbus.team/',
           },
         ],
       },
@@ -92,16 +92,20 @@ const config = {
           {
             items: [
               {
+                href: 'https://twitter.com/ethnimbus',
                 label: 'Twitter',
-                href: 'https://twitter.com/vacp2p',
               },
               {
+                href: 'https://discord.gg/EP8DZnXu9y',
                 label: 'Discord',
-                href: 'https://discord.gg/PQFdubGt6d',
               },
               {
+                to: '/docs',
+                label: 'Docs',
+              },
+              {
+                href: 'https://github.com/status-im',
                 label: 'Github',
-                href: 'https://github.com/vacp2p',
               },
             ],
           },
