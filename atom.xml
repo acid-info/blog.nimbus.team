@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://nimbus.team/</id>
+    <title>Nimbus Blog</title>
+    <updated>2023-11-30T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://nimbus.team/"/>
+    <subtitle>Nimbus Blog</subtitle>
+    <icon>https://nimbus.team/theme/image/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[this is a test]]></title>
+        <id>https://nimbus.team/2023/11/30/test-blog-post</id>
+        <link href="https://nimbus.team/2023/11/30/test-blog-post"/>
+        <updated>2023-11-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[test description]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subtitle">Subtitle<a href="#subtitle" class="hash-link" aria-label="Direct link to Subtitle" title="Direct link to Subtitle">​</a></h2><p>something something ...</p><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subtitle-1">Subtitle<a href="#subtitle-1" class="hash-link" aria-label="Direct link to Subtitle" title="Direct link to Subtitle">​</a></h2><p>something something ...</p><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subtitle-2">Subtitle<a href="#subtitle-2" class="hash-link" aria-label="Direct link to Subtitle" title="Direct link to Subtitle">​</a></h2><p>something something ...</p><p><a href="https://logos.co" target="_blank" rel="noopener noreferrer">Link</a></p>]]></content>
+    </entry>
+</feed>
