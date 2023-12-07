@@ -114,8 +114,8 @@ $ yarn serve
 
 ## CI/CD
 
-- The `master` branch is automatically deployed to the production server (e.g., logos.co) through [CI](https://ci.infra.status.im)
-- The `develop` branch is automatically deployed to the staging server (e.g., dev.logos.co) through [CI](https://ci.infra.status.im)
+- `master` branch is built via [CI](https://ci.infra.status.im), pushed to `deploy-master`, published to https://blog.nimbus.team/.
+- `develop` branch is built via [CI](https://ci.infra.status.im), pushed to `deploy-develop`, published to https://dev-blog.nimbus.team/.
 
 
 ## Change Process

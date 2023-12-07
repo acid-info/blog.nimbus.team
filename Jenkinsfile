@@ -13,10 +13,6 @@ pipeline {
   environment {
     GIT_COMMITTER_NAME = 'status-im-auto'
     GIT_COMMITTER_EMAIL = 'auto@status.im'
-    PROD_SITE = 'vac.dev'
-    DEV_SITE  = 'dev.vac.dev'
-    DEV_HOST  = 'jenkins@node-01.do-ams3.sites.misc.statusim.net'
-    SCP_OPTS  = 'StrictHostKeyChecking=no'
   }
 
   stages {
@@ -29,27 +25,14 @@ pipeline {
     stage('Build') {
       steps {
         sh 'yarn build'
-        sh "echo ${env.PROD_SITE} > build/CNAME"
+        sh "echo ${deployDomain()} > build/CNAME"
       }
     }
 
-    stage('Publish Prod') {
-      when { expression { env.GIT_BRANCH ==~ /.*master/ } }
+    stage('Publish') {
       steps {
         sshagent(credentials: ['status-im-auto-ssh']) {
-          sh "ghp-import -p build"
-        }
-      }
-    }
-
-    stage('Publish Devel') {
-      when { expression { env.GIT_BRANCH ==~ /.*develop/ } }
-      steps {
-        sshagent(credentials: ['jenkins-ssh']) {
-          sh """
-            rsync -e 'ssh -o ${SCP_OPTS}' -r --delete build/. \
-              ${env.DEV_HOST}:/var/www/${env.DEV_SITE}/
-          """
+          sh "ghp-import -p build -b ${deployBranch()}"
         }
       }
     }
@@ -59,3 +42,7 @@ pipeline {
     cleanup { cleanWs() }
   }
 }
+
+def isMasterBranch() { GIT_BRANCH ==~ /.*master/ }
+def deployBranch() { isMasterBranch() ? 'deploy-master' : 'deploy-develop' }
+def deployDomain() { isMasterBranch() ? 'blog.nimbus.team' : 'dev-blog.nimbus.team' }
