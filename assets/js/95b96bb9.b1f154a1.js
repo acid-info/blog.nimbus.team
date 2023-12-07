@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklogos_blog_template=self.webpackChunklogos_blog_template||[]).push([[561],{24577:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[]}')}}]);
