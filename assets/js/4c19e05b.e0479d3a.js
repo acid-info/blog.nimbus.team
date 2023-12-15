@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklogos_blog_template=self.webpackChunklogos_blog_template||[]).push([[889],{74677:e=>{e.exports=JSON.parse('{"permalink":"/","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Nimbus Blog"}')}}]);
