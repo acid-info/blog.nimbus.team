@@ -71,6 +71,14 @@ const config = {
         },
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'root-pages',
+        routeBasePath: '/',
+        path: 'root-pages',
+      },
+    ],
   ],
 
   themeConfig:
@@ -118,6 +126,10 @@ const config = {
               {
                 label: 'Terms & Conditions',
                 to: '/terms',
+              },
+              {
+                href: '/privacy-policy',
+                label: 'Privacy Policy',
               },
             ],
           },
